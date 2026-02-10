@@ -1,0 +1,87 @@
+.link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: rgb(var(--color-primary-accent));
+  font-weight: bold;
+}
+
+.link:hover {
+  color: rgb(var(--color-primary-accent-hover));
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-xxs);
+
+  font-size: var(--fontsize-sm);
+  text-align: center;
+  
+  border-radius: var(--radius-sm);
+  border: var(--border-width-normal) solid rgb(var(--color-border));
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btn-neutral {
+  background-color: rgb(var(--color-neutral));
+  color: rgb(var(--color-primary-text-inverted));
+}
+
+.btn-neutral:hover {
+  background-color: rgb(var(--color-neutral-hover));
+}
+
+.btn-primary {
+  background-color: rgb(var(--color-primary-accent));
+  color: rgb(var(--color-primary-text-inverted));
+}
+
+.btn-primary:hover {
+  background-color: rgb(var(--color-primary-accent-hover));
+}
+
+.btn-secondary {
+  background-color: rgb(var(--color-secondary-accent));
+  color: rgb(var(--color-primary-text-inverted));
+}
+
+.btn-secondary:hover {
+  background-color: rgb(var(--color-secondary-accent-hover));
+}
+
+.btn-success {
+  background-color: rgb(var(--color-success));
+  color: rgb(var(--color-primary-text-inverted));
+}
+
+.btn-success:hover {
+  background-color: rgb(var(--color-success-hover));
+}
+
+.btn-error {
+  background-color: rgb(var(--color-error));
+  color: rgb(var(--color-primary-text-inverted));
+}
+
+.btn-error:hover {
+  background-color: rgb(var(--color-error-hover));
+}
+
+.btn-warning {
+  background-color: rgb(var(--color-warning));
+  color: rgb(15, 23, 42);
+}
+
+.btn-warning:hover {
+  background-color: rgb(var(--color-warning-hover));
+}
