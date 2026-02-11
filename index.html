@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rectify11</title>
+
+  <script>
+    (function () {
+      const savedMode = localStorage.getItem('theme');
+      const theme = savedMode || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const icon = document.querySelector('#theme-toggle-icon');
+        if (theme === 'light') {
+          icon.className = 'ri-moon-line';
+        } else {
+          icon.className = 'ri-sun-line';
+        }
+      });
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      Rectify11.
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-list-item">
+          <a href="#" class="navbar-link" id="home-link">Home</a>
+        </li>
+        <li class="navbar-list-item">
+          <a href="#" class="navbar-link" id="features-link">Features</a>
+        </li>
+        <li class="navbar-list-item">
+          <a href="#" class="navbar-link" id="why-link">Why Rectify11?</a>
+        </li>
+        <li class="navbar-list-item">
+          <a href="#" class="navbar-link" id="testimonials-link">Testimonials</a>
+        </li>
+        <li class="navbar-list-item">
+          <a href="#" class="navbar-link" id="faq-link">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="toggles">
+      <button class="toggle theme-toggle" id="theme-toggle">
+        <i class="ri-sun-line" class="theme-toggle-icon" id="theme-toggle-icon"></i>
+      </button>
+
+      <button class="toggle hamburger-toggle" id="hamburger-toggle">
+        <i class="ri-menu-4-line hamburger-toggle-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="navbar-overlay" id="navbar-overlay"></div>
+  <script type="module" src="js/navbar.js"></script>
+</body>
+</html>
